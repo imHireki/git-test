@@ -4,5 +4,6 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('text-emoji/', views.textemoji, name='textemoji'),
+    path('simbol-emoji/', views.simbolemoji, name='simbolemoji'),
+    path('text-convert/', views.textconvert, name='textconvert'),
 ]
