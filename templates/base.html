@@ -4,19 +4,24 @@
 
 <head>
     {% include 'partials/_head.html'%}
-    <title>Bootstrap</title>
+    <title>{% block title %}{% endblock %}</title>
 </head>
 
 <body>
+    <!-- Navigator -->
     {% include 'partials/_nav.html'%}
+
     <!-- Page Content -->
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
+        <div class="row col-lg-10">
+            <div class="text-center">
                 {% block content %}{% endblock %}
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    {% include 'partials/_footer.html' %}
 
     <!-- Bootstrap core JavaScript -->
     <script src="{% static 'vendor/jquery/jquery.slim.min.js'%}"></script>
