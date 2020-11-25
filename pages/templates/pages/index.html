@@ -3,6 +3,14 @@
 {% block title %} Homepage {% endblock %}
 
 {% block content %}
-Lorem Ipsum
+
+<form action="/your-name/" method="post">{% csrf_token %} 
+    <label for="your_name">Your name: </label>
+    <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+    <input type="submit" value="OK">
+    <label for="your_name">Your name: </label>
+    <input id="your_name" type="text" name="your_name" maxlength="100" required>
+</form>
+
 
 {% endblock %}
